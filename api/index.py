@@ -1,39 +1,4 @@
-# from groq import Groq
-
-
-
-# def repondre_ia(message):
-#     response = client.chat.completions.create(
-#         model="llama-3.3-70b-versatile",
-#         messages=[
-#             {
-#                 "role": "system",
-#                 "content": """Tu es le bot d'une pharmacie à Yaoundé appelée PharmaBot.
-#                 Tu réponds uniquement aux questions liées à la pharmacie.
-#                 Tu es poli, court et précis.
-#                 Tu réponds toujours en français."""
-#             },
-#             {
-#                 "role": "user",
-#                 "content": message
-#             }
-#         ]
-#     )
-#     return response.choices[0].message.content
-
-# # Boucle de conversation
-# print("=== PharmaBot IA ===")
-# print("(tapez 'au revoir' pour quitter)\n")
-
-# while True:
-#     message_client = input("Client : ")
-#     if "au revoir" in message_client.lower():
-#         print("Bot : Portez-vous bien. À bientôt !")
-#         break
-#     reponse = repondre_ia(message_client)
-#     print(f"Bot : {reponse}\n")
-
-
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from groq import Groq
